@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gE1-M9-f6u">
+                                <rect key="frame" x="157" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="lFR-Eg-IFv"/>
+                                    <constraint firstAttribute="height" constant="100" id="tIp-O8-GXC"/>
+                                </constraints>
+                                <state key="normal" image="LOL_f6f8ff_100"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7Q-9M-y0H">
+                                <rect key="frame" x="20" y="511" width="374" height="48"/>
+                                <color key="backgroundColor" red="1" green="0.92526584201388884" blue="0.43642083203611115" alpha="0.83283390410958902" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="HJY-0P-djn"/>
+                                    <constraint firstAttribute="height" constant="48" id="MCU-5m-zPP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="23"/>
+                                <state key="normal" title="GO!">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.089296653470000001" blue="0.0" alpha="0.7030179795" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="n9l-ZV-AmY" kind="show" id="vHZ-sp-kbS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F7Q-9M-y0H" firstAttribute="top" secondItem="gE1-M9-f6u" secondAttribute="bottom" constant="128" id="8k0-5l-fyP"/>
+                            <constraint firstItem="F7Q-9M-y0H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CKs-vU-AKg"/>
+                            <constraint firstItem="gE1-M9-f6u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DAT-cr-lg2"/>
+                            <constraint firstItem="gE1-M9-f6u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="263" id="YVX-nQ-dem"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonGo" destination="F7Q-9M-y0H" id="kvj-gl-ozN"/>
+                        <outlet property="buttonSmile" destination="gE1-M9-f6u" id="dvA-RY-XHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="37.5"/>
+        </scene>
+        <!--View Controller Game-->
+        <scene sceneID="jmW-1r-CTt">
+            <objects>
+                <viewController id="n9l-ZV-AmY" customClass="ViewControllerGame" customModule="Smile" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eyw-af-CEH"/>
+                        <viewControllerLayoutGuide type="bottom" id="PtN-Ro-BdM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4zN-xS-7vg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOL_f6f8ff_100" translatesAutoresizingMaskIntoConstraints="NO" id="NYF-N6-PSY">
+                                <rect key="frame" x="237" y="59" width="121" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="8SH-kM-PHf"/>
+                                    <constraint firstAttribute="height" constant="128" id="QDU-Cj-pMw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tll-yC-3SD">
+                                <rect key="frame" x="20" y="289" width="374" height="81"/>
+                                <color key="backgroundColor" red="1" green="0.92526584199999995" blue="0.43642083199999998" alpha="0.83283390410000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="JSR-VR-Q9M"/>
+                                    <constraint firstAttribute="height" constant="81" id="fbu-wa-Jin"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="26"/>
+                                <state key="normal" title="SMILE">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSmile:" destination="n9l-ZV-AmY" eventType="touchUpInside" id="ugF-Pl-hc2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4y-hW-5w9">
+                                <rect key="frame" x="20" y="388" width="374" height="81"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.089296653470000001" blue="0.0" alpha="0.7030179795" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="BqS-Zp-Zbt"/>
+                                    <constraint firstAttribute="height" constant="81" id="lV7-Kl-YLf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="28"/>
+                                <state key="normal" title="RESERT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonResert:" destination="n9l-ZV-AmY" eventType="touchUpInside" id="Hig-le-RQS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R0g-gg-b01">
+                                <rect key="frame" x="26" y="70" width="122" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="IXc-ef-SBw"/>
+                                    <constraint firstAttribute="height" constant="107" id="h4n-Qc-7Ud"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u4y-hW-5w9" firstAttribute="top" secondItem="tll-yC-3SD" secondAttribute="bottom" constant="18" id="4C3-XW-5VO"/>
+                            <constraint firstItem="tll-yC-3SD" firstAttribute="centerX" secondItem="4zN-xS-7vg" secondAttribute="centerX" id="4gb-2h-jdW"/>
+                            <constraint firstItem="tll-yC-3SD" firstAttribute="top" secondItem="NYF-N6-PSY" secondAttribute="bottom" constant="102" id="9ba-o1-bjv"/>
+                            <constraint firstItem="R0g-gg-b01" firstAttribute="leading" secondItem="4zN-xS-7vg" secondAttribute="leading" constant="26" id="FaD-92-Aig"/>
+                            <constraint firstItem="NYF-N6-PSY" firstAttribute="top" secondItem="eyw-af-CEH" secondAttribute="bottom" constant="39" id="MBy-gk-MYt"/>
+                            <constraint firstAttribute="trailing" secondItem="NYF-N6-PSY" secondAttribute="trailing" constant="56" id="UnU-Ly-gaC"/>
+                            <constraint firstItem="R0g-gg-b01" firstAttribute="top" secondItem="eyw-af-CEH" secondAttribute="bottom" constant="50" id="buc-mz-2Tn"/>
+                            <constraint firstItem="u4y-hW-5w9" firstAttribute="centerX" secondItem="4zN-xS-7vg" secondAttribute="centerX" id="xmX-jz-tPO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonResertCustom" destination="u4y-hW-5w9" id="odR-QF-cZH"/>
+                        <outlet property="buttonSmileCustom" destination="tll-yC-3SD" id="zMk-jG-ndw"/>
+                        <outlet property="imageSmile" destination="NYF-N6-PSY" id="iET-eb-eMg"/>
+                        <outlet property="labelScore" destination="R0g-gg-b01" id="J0W-ND-I4S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3z3-gn-N0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="37.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="LOL_f6f8ff_100" width="120" height="120"/>
+    </resources>
+</document>

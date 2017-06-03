@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12029"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="FMd-jd-dt7">
+            <objects>
+                <controller id="W2E-LN-Dsw">
+                    <items>
+                        <label width="136" height="154" alignment="center" text="SMILE                    vous permets de compter les sourires que vous avez reçu dans la journée" textAlignment="center" numberOfLines="6" id="w9l-WV-Wh9">
+                            <color key="textColor" red="1" green="1" blue="0.58971401779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <segue destination="xop-WN-TMf" kind="relationship" relationship="nextPage" id="71x-sn-Z03"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="239" y="363"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc">
+                    <items>
+                        <imageView width="79" height="81" alignment="center" image="LOL_f6f8ff_100" id="cdF-3Q-Bef"/>
+                        <label alignment="center" text="TU M'AS SOURIS??" textAlignment="center" id="eLw-qZ-9Eq">
+                            <color key="textColor" red="1" green="1" blue="0.68636657852777772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <button width="134" height="42" alignment="center" title="COMPTEUR DE SOURIRE !" id="MMS-gO-ByM">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="1" green="1" blue="0.62473463410555552" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                            <connections>
+                                <segue destination="W2E-LN-Dsw" kind="modal" id="1Li-OE-hfk"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-40" y="363"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="azg-Cw-QYR">
+            <objects>
+                <controller id="xop-WN-TMf" customClass="InterfaceController" customModule="Smile_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="73" alignment="left" id="ccw-MQ-Ypb">
+                            <items>
+                                <label width="71" height="77" alignment="left" text="0" textAlignment="center" id="aw5-V2-HAv">
+                                    <color key="textColor" red="1" green="1" blue="0.58971401779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="boldSystem" pointSize="40"/>
+                                </label>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" image="LOL_f6f8ff_100" id="96o-d7-Vgr"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" title="SMILE" id="RAd-KV-l6O">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" red="1" green="1" blue="0.62473463409999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                            <connections>
+                                <action selector="buttonSourire" destination="xop-WN-TMf" id="GVA-Bb-NJ2"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="center" title="RESET" id="Uzz-bZ-H4b">
+                            <color key="backgroundColor" red="0.86976453993055558" green="0.093288845486111105" blue="0.18939887152777779" alpha="0.81592465750821908" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="buttonReset" destination="xop-WN-TMf" id="vf2-Sh-OUQ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="96o-d7-Vgr" id="up3-oy-x8i"/>
+                        <outlet property="labelScore" destination="aw5-V2-HAv" id="vhG-iR-zUY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="496" y="363.5"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Smile_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
