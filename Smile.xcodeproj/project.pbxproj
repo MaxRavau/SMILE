@@ -23,6 +23,7 @@
 		508E762D1EDEE9A900C5CC3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 508E762C1EDEE9A900C5CC3D /* Assets.xcassets */; };
 		508E763D1EE2C46C00C5CC3D /* ViewControllerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508E763C1EE2C46C00C5CC3D /* ViewControllerGame.swift */; };
 		508E763F1EE2C87300C5CC3D /* 1484.wav in Resources */ = {isa = PBXBuildFile; fileRef = 508E763E1EE2C87300C5CC3D /* 1484.wav */; };
+		508E764E1EE433DC00C5CC3D /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E764D1EE433DC00C5CC3D /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,10 @@
 		508E762E1EDEE9A900C5CC3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		508E763C1EE2C46C00C5CC3D /* ViewControllerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerGame.swift; sourceTree = "<group>"; };
 		508E763E1EE2C87300C5CC3D /* 1484.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 1484.wav; path = ../../../../Desktop/1484.wav; sourceTree = "<group>"; };
+		508E76491EE41EEA00C5CC3D /* Smile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Smile.entitlements; sourceTree = "<group>"; };
+		508E764A1EE41F4800C5CC3D /* Smile WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smile WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		508E764B1EE41F5200C5CC3D /* Smile WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Smile WatchKit App.entitlements"; sourceTree = "<group>"; };
+		508E764D1EE433DC00C5CC3D /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				508E764E1EE433DC00C5CC3D /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +122,7 @@
 				508E76121EDEE9A800C5CC3D /* Smile WatchKit App */,
 				508E76211EDEE9A900C5CC3D /* Smile WatchKit Extension */,
 				508E75FD1EDEE9A800C5CC3D /* Products */,
+				508E764C1EE433DB00C5CC3D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +139,7 @@
 		508E75FE1EDEE9A800C5CC3D /* Smile */ = {
 			isa = PBXGroup;
 			children = (
+				508E76491EE41EEA00C5CC3D /* Smile.entitlements */,
 				508E75FF1EDEE9A800C5CC3D /* AppDelegate.swift */,
 				508E76011EDEE9A800C5CC3D /* ViewController.swift */,
 				508E763C1EE2C46C00C5CC3D /* ViewControllerGame.swift */,
@@ -147,6 +155,7 @@
 		508E76121EDEE9A800C5CC3D /* Smile WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				508E764B1EE41F5200C5CC3D /* Smile WatchKit App.entitlements */,
 				508E76131EDEE9A800C5CC3D /* Interface.storyboard */,
 				508E76161EDEE9A900C5CC3D /* Assets.xcassets */,
 				508E76181EDEE9A900C5CC3D /* Info.plist */,
@@ -157,6 +166,7 @@
 		508E76211EDEE9A900C5CC3D /* Smile WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				508E764A1EE41F4800C5CC3D /* Smile WatchKit Extension.entitlements */,
 				508E76241EDEE9A900C5CC3D /* InterfaceController.swift */,
 				508E76261EDEE9A900C5CC3D /* ExtensionDelegate.swift */,
 				508E76281EDEE9A900C5CC3D /* NotificationController.swift */,
@@ -174,6 +184,14 @@
 				508E76231EDEE9A900C5CC3D /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		508E764C1EE433DB00C5CC3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				508E764D1EE433DC00C5CC3D /* WatchConnectivity.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,16 +264,31 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HQJH2FAWDR;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					508E760D1EDEE9A800C5CC3D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HQJH2FAWDR;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					508E761C1EDEE9A900C5CC3D = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = HQJH2FAWDR;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -472,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Smile WatchKit Extension/Smile WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = HQJH2FAWDR;
 				INFOPLIST_FILE = "Smile WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -489,6 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "Smile WatchKit Extension/Smile WatchKit Extension.entitlements";
 				DEVELOPMENT_TEAM = HQJH2FAWDR;
 				INFOPLIST_FILE = "Smile WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -540,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
+				CODE_SIGN_ENTITLEMENTS = Smile/Smile.entitlements;
 				DEVELOPMENT_TEAM = HQJH2FAWDR;
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -553,6 +589,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Icon;
+				CODE_SIGN_ENTITLEMENTS = Smile/Smile.entitlements;
 				DEVELOPMENT_TEAM = HQJH2FAWDR;
 				INFOPLIST_FILE = Smile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -581,6 +618,7 @@
 				508E76331EDEE9A900C5CC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		508E76351EDEE9A900C5CC3D /* Build configuration list for PBXNativeTarget "Smile WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +627,7 @@
 				508E76371EDEE9A900C5CC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		508E76391EDEE9A900C5CC3D /* Build configuration list for PBXNativeTarget "Smile" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +636,7 @@
 				508E763B1EDEE9A900C5CC3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

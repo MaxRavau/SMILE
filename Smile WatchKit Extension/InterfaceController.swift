@@ -19,7 +19,8 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        debutJeu()
+        
+        
     }
     
     
@@ -30,7 +31,10 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
+        
+        
+        
+        
         super.didDeactivate()
     }
     @IBAction func buttonSourire() {
@@ -63,11 +67,13 @@ class InterfaceController: WKInterfaceController {
         
     }
     
+    
+    
     func saveHighScore() {
         UserDefaults.standard.set(scoreActuel, forKey: "Score")
         
         print("sauvegarder")
     }
     
-   
+       
 }

@@ -59,7 +59,7 @@
                                     <color key="textColor" red="1" green="1" blue="0.58971401779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="boldSystem" pointSize="40"/>
                                 </label>
-                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" image="LOL_f6f8ff_100" id="96o-d7-Vgr"/>
+                                <imageView width="50" height="50" alignment="center" verticalAlignment="center" image="LOL_f6f8ff_100" animationDuration="1" id="96o-d7-Vgr"/>
                             </items>
                         </group>
                         <button width="1" alignment="center" title="SMILE" id="RAd-KV-l6O">
@@ -83,7 +83,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="496" y="363.5"/>
+            <point key="canvasLocation" x="496" y="276.5"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

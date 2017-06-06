@@ -43,6 +43,12 @@ class ViewControllerGame: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        
+    }
+    
     func custombutton(){
         
         buttonSmileCustom.layer.cornerRadius = 10
@@ -72,7 +78,11 @@ class ViewControllerGame: UIViewController {
         imageSmile.alpha = 1
         
         saveHighScore()
+        
+            
     }
+    
+    
   
     @IBAction func buttonResert(_ sender: Any) {
         
